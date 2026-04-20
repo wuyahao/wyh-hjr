@@ -1,0 +1,35 @@
+﻿import { motion } from "framer-motion";
+import FadeInSection from "./FadeInSection";
+import SectionTitle from "./SectionTitle";
+
+export default function AlbumSection({ items }) {
+  return (
+    <FadeInSection className="section">
+      <div className="container">
+        <SectionTitle
+          eyebrow="相册"
+          title="把值得记住的画面，温柔地收藏起来"
+          description="这里先放占位图，后续你可以直接替换成真实照片，文案和结构都已经预留好了。"
+        />
+        <div className="album-grid">
+          {items.map((item, index) => (
+            <motion.article
+              key={item.title}
+              className="album-card glass-card"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.65, delay: index * 0.06 }}
+            >
+              <img src={item.image} alt={item.title} />
+              <div className="album-copy">
+                <h3>{item.title}</h3>
+                <p>{item.caption}</p>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </div>
+    </FadeInSection>
+  );
+}

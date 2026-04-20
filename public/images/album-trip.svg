@@ -1,0 +1,8 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F4F1EF"/>
+  <path d="M0 654C161 591 284 567 410 580C536 593 666 646 806 634C946 622 1068 544 1200 514V900H0V654Z" fill="#D8E4EE"/>
+  <path d="M0 575C136 513 291 469 436 486C581 503 701 585 843 588C985 591 1087 514 1200 445V900H0V575Z" fill="#E9D5D9"/>
+  <path d="M164 586L367 337L510 502L639 406L855 620H164V586Z" fill="#FFFCFA" stroke="#E6DCD7" stroke-width="4"/>
+  <circle cx="830" cy="238" r="96" fill="#FFFCFA"/>
+  <text x="600" y="780" text-anchor="middle" fill="#7F8793" font-size="44" font-family="Microsoft YaHei, sans-serif">替换为旅行照片</text>
+</svg>

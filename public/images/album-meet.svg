@@ -1,0 +1,13 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F7F1EE"/>
+  <circle cx="247" cy="201" r="115" fill="#E8D6D9"/>
+  <circle cx="927" cy="205" r="146" fill="#D8E4EE"/>
+  <rect x="144" y="194" width="912" height="512" rx="36" fill="#FFFCFA" stroke="#E8E0DC" stroke-width="4"/>
+  <path d="M375 498C426.8 429.2 497.2 394.6 586 394C674.8 393.4 747.4 428 804 498" stroke="#C5B6BC" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="476" cy="379" r="68" fill="#EEDFE3"/>
+  <circle cx="718" cy="379" r="68" fill="#DFEAF2"/>
+  <path d="M565 382C565 352.729 588.729 329 618 329C647.271 329 671 352.729 671 382V456H565V382Z" fill="#F4E9EC"/>
+  <rect x="438" y="566" width="324" height="18" rx="9" fill="#D6DEE5"/>
+  <rect x="478" y="605" width="244" height="18" rx="9" fill="#E7D5D9"/>
+  <text x="600" y="768" text-anchor="middle" fill="#7F8793" font-size="44" font-family="Microsoft YaHei, sans-serif">替换为第一次见面的照片</text>
+</svg>
