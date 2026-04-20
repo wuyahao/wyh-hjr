@@ -80,7 +80,7 @@ export default function App() {
         <TimelineSection items={timeline} />
         <CitiesSection cities={cities} />
         <AlbumSection items={album} />
-        <LetterSection letter={couple.letter} />
+        <LetterSection letter={couple.letter} closing={couple.letterClosing} />
       </main>
       <FooterSection text={couple.footerText} />
     </div>

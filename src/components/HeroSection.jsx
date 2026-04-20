@@ -20,9 +20,11 @@ export default function HeroSection({ content, anniversaryText, dayCount }) {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
           <span className="hero-kicker">Love Memorial</span>
+          <p className="hero-aliases">{content.aliases}</p>
           <h1>{content.title}</h1>
           <p className="hero-subtitle">{content.subtitle}</p>
           <p className="hero-quote">{content.heroQuote}</p>
+          <p className="hero-intro">{content.heroIntro}</p>
 
           <div className="hero-actions">
             <button className="primary-button" onClick={scrollToStory}>
@@ -43,8 +45,8 @@ export default function HeroSection({ content, anniversaryText, dayCount }) {
           transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="hero-badge-row">
-            <span>双人故事</span>
-            <span>长沙 / 东北 / 深圳 / 北京</span>
+            <span>私人纪念册</span>
+            <span>长沙 / 沈阳 / 哈尔滨 / 通辽 / 深圳 / 北京</span>
           </div>
           <div className="hero-couple">
             <div>
@@ -60,8 +62,9 @@ export default function HeroSection({ content, anniversaryText, dayCount }) {
             </div>
           </div>
           <div className="hero-note">
-            <p>从网络的相遇，到现实里的奔赴。</p>
-            <p>从同城相拥，到异地依然坚定。</p>
+            {content.heroPanelLines.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
           </div>
         </motion.div>
       </div>

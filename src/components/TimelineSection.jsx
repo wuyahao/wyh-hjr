@@ -8,8 +8,8 @@ export default function TimelineSection({ items }) {
       <div className="container">
         <SectionTitle
           eyebrow="时间线"
-          title="沿着时间回看，我们认真爱过的每一步"
-          description="每一个节点都不是仓促路过，而是让关系一点点更深、更稳、更确定。"
+          title="那些被时间轻轻标记下来的节点"
+          description="从相识、相恋、见面、旅行，到低谷与异地，每一步都让这段关系更像命运认真写下的注脚。"
         />
 
         <div className="timeline">

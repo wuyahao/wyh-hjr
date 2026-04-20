@@ -1,16 +1,17 @@
 :root {
-  --bg: #f7f3ef;
-  --bg-soft: #fcf8f5;
-  --surface: rgba(255, 251, 249, 0.72);
-  --surface-strong: rgba(255, 255, 255, 0.86);
-  --text: #3f4752;
-  --text-soft: #6d7581;
-  --pink: #e7cfd3;
-  --pink-deep: #d9b8bf;
-  --blue: #d9e3ec;
-  --blue-deep: #adc3d8;
-  --line: rgba(105, 120, 138, 0.14);
-  --shadow: 0 18px 60px rgba(112, 128, 148, 0.13);
+  --bg: #f4efe8;
+  --bg-soft: #fbf7f1;
+  --surface: rgba(253, 249, 244, 0.72);
+  --surface-strong: rgba(255, 252, 248, 0.88);
+  --text: #4c4a4c;
+  --text-soft: #726f73;
+  --pink: #dfcbc8;
+  --pink-deep: #ccaeac;
+  --blue: #d7dfe5;
+  --blue-deep: #aab6c2;
+  --paper: #f0e5d6;
+  --line: rgba(117, 113, 118, 0.14);
+  --shadow: 0 22px 70px rgba(104, 100, 108, 0.12);
   --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 18px;
@@ -30,10 +31,27 @@ body {
   font-family: "Noto Serif SC", "PingFang SC", "Microsoft YaHei", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(231, 207, 211, 0.58), transparent 30%),
-    radial-gradient(circle at top right, rgba(217, 227, 236, 0.72), transparent 28%),
-    linear-gradient(180deg, #fffdfb 0%, var(--bg) 45%, #f5f1ee 100%);
+    radial-gradient(circle at top left, rgba(223, 203, 200, 0.5), transparent 28%),
+    radial-gradient(circle at top right, rgba(215, 223, 229, 0.68), transparent 30%),
+    linear-gradient(180deg, #fffdf8 0%, var(--bg) 42%, #f1ebe4 100%);
   min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 3px,
+      rgba(122, 119, 126, 0.02) 4px
+    );
+  mix-blend-mode: multiply;
+  opacity: 0.55;
 }
 
 img {
@@ -57,8 +75,9 @@ textarea {
 }
 
 .glass-card {
-  background: linear-gradient(180deg, var(--surface-strong), var(--surface));
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  background:
+    linear-gradient(180deg, rgba(255, 252, 248, 0.94), rgba(250, 245, 240, 0.72));
+  border: 1px solid rgba(255, 255, 255, 0.62);
   box-shadow: var(--shadow);
   backdrop-filter: blur(22px);
 }
@@ -140,6 +159,14 @@ textarea {
   font-size: 0.78rem;
 }
 
+.hero-aliases {
+  margin: 22px 0 10px;
+  color: #8f7f84;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
 .hero h1 {
   margin: 22px 0 14px;
   font-size: clamp(3rem, 6vw, 5.6rem);
@@ -160,6 +187,14 @@ textarea {
   font-size: 1.05rem;
   line-height: 2;
   color: var(--text-soft);
+}
+
+.hero-intro {
+  max-width: 680px;
+  margin: 18px 0 0;
+  font-size: 1rem;
+  line-height: 2;
+  color: rgba(76, 74, 76, 0.88);
 }
 
 .hero-actions {
@@ -195,8 +230,9 @@ textarea {
   padding: 16px 20px;
   min-width: 220px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.62);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  background:
+    linear-gradient(180deg, rgba(255, 251, 247, 0.82), rgba(242, 234, 226, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.72);
   box-shadow: var(--shadow);
 }
 
@@ -214,6 +250,22 @@ textarea {
   position: relative;
   border-radius: var(--radius-xl);
   padding: 28px;
+  overflow: hidden;
+}
+
+.hero-panel::after,
+.story-card::after,
+.anniversary-wrap::after,
+.map-card::after,
+.city-card::after,
+.album-card::after,
+.letter-card::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: inherit;
+  border: 1px solid rgba(185, 176, 170, 0.14);
+  pointer-events: none;
 }
 
 .hero-badge-row {
@@ -285,6 +337,10 @@ textarea {
   line-height: 1.9;
 }
 
+.hero-note p {
+  margin: 0;
+}
+
 .hero-glow {
   position: absolute;
   border-radius: 50%;
@@ -322,6 +378,12 @@ textarea {
   padding: 34px;
 }
 
+.story-stack,
+.letter-stack {
+  display: grid;
+  gap: 18px;
+}
+
 .story-copy,
 .letter-copy {
   margin: 0;
@@ -339,7 +401,8 @@ textarea {
 .metric-card {
   padding: 22px 18px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.62);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 246, 0.8), rgba(245, 237, 230, 0.62));
   border: 1px solid rgba(255, 255, 255, 0.76);
   text-align: center;
 }
@@ -376,6 +439,8 @@ textarea {
   margin-left: 48px;
   border-radius: var(--radius-lg);
   padding: 26px 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 246, 0.92), rgba(247, 239, 232, 0.76));
 }
 
 .timeline-card::before {
@@ -433,6 +498,7 @@ textarea {
 .map-card {
   border-radius: var(--radius-xl);
   padding: 26px;
+  position: relative;
 }
 
 .map-header {
@@ -448,10 +514,10 @@ textarea {
   margin-top: 22px;
   border-radius: 28px;
   background:
-    radial-gradient(circle at 20% 25%, rgba(231, 207, 211, 0.35), transparent 20%),
-    radial-gradient(circle at 70% 30%, rgba(217, 227, 236, 0.5), transparent 22%),
-    radial-gradient(circle at 60% 75%, rgba(231, 207, 211, 0.3), transparent 24%),
-    rgba(255, 255, 255, 0.52);
+    radial-gradient(circle at 20% 25%, rgba(223, 203, 200, 0.35), transparent 20%),
+    radial-gradient(circle at 70% 30%, rgba(215, 223, 229, 0.5), transparent 22%),
+    radial-gradient(circle at 60% 75%, rgba(223, 203, 200, 0.28), transparent 24%),
+    linear-gradient(180deg, rgba(253, 248, 242, 0.88), rgba(245, 236, 228, 0.72));
   overflow: hidden;
 }
 
@@ -479,7 +545,8 @@ textarea {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.82);
+  background:
+    linear-gradient(180deg, rgba(255, 251, 247, 0.88), rgba(242, 234, 226, 0.76));
   box-shadow: var(--shadow);
   color: #697382;
 }
@@ -522,6 +589,7 @@ textarea {
 .album-card {
   border-radius: var(--radius-lg);
   padding: 22px;
+  position: relative;
 }
 
 .city-tag {
@@ -544,6 +612,7 @@ textarea {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 20px;
+  filter: saturate(0.88) contrast(0.94);
 }
 
 .album-copy {
@@ -552,6 +621,17 @@ textarea {
 
 .letter-card {
   max-width: 920px;
+  position: relative;
+}
+
+.letter-card::before {
+  content: "To Hao Jiarui";
+  position: absolute;
+  right: 28px;
+  top: 24px;
+  color: rgba(143, 127, 132, 0.48);
+  letter-spacing: 0.18em;
+  font-size: 0.74rem;
 }
 
 .footer {

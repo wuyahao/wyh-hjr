@@ -8,7 +8,7 @@ export default function AnniversarySection({ label, note, metrics }) {
         <div className="anniversary-wrap glass-card">
           <SectionTitle
             eyebrow={label}
-            title="把相爱的时间，安静地记下来"
+            title="把爱过的日子，一天一天地记下来"
             description={note}
           />
           <div className="anniversary-metrics">

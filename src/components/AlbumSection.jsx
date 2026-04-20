@@ -8,8 +8,8 @@ export default function AlbumSection({ items }) {
       <div className="container">
         <SectionTitle
           eyebrow="相册"
-          title="把值得记住的画面，温柔地收藏起来"
-          description="这里先放占位图，后续你可以直接替换成真实照片，文案和结构都已经预留好了。"
+          title="把回忆留在画面里，也留在旁白里"
+          description="这里先放占位图。以后你换上真正的照片，这些片段会更像一部只属于你们的私人电影。"
         />
         <div className="album-grid">
           {items.map((item, index) => (
