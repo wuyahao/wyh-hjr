@@ -4,6 +4,7 @@ import CitiesSection from "./components/CitiesSection";
 import FooterSection from "./components/FooterSection";
 import HeroSection from "./components/HeroSection";
 import LetterSection from "./components/LetterSection";
+import ScenesSection from "./components/ScenesSection";
 import StorySection from "./components/StorySection";
 import TimelineSection from "./components/TimelineSection";
 import { siteContent } from "./data/siteContent";
@@ -72,6 +73,7 @@ export default function App() {
       />
       <main>
         <StorySection story={couple.story} />
+        <ScenesSection items={couple.scenes} />
         <AnniversarySection
           label={anniversary.label}
           note={anniversary.note}

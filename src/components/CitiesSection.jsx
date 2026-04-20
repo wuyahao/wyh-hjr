@@ -39,6 +39,7 @@ export default function CitiesSection({ cities }) {
               <article key={city.name} className="city-card glass-card">
                 <span className="city-tag">{city.tag}</span>
                 <h3>{city.name}</h3>
+                <p className="city-memory">{city.tag}</p>
                 <p>{city.desc}</p>
               </article>
             ))}
